@@ -1,6 +1,7 @@
 define([
-    'esri/units'
-], function (esriUnits) {
+    'esri/units',
+    'dojo/sniff'
+], function (esriUnits, has) {
 
     return {
 
@@ -21,7 +22,7 @@ define([
 
         panes: {
             left: {
-                splitter: true,
+                splitter: !has('touch'),
                 style: 'width:340px;'
             }
         },
@@ -88,6 +89,7 @@ define([
                 type: 'titlePane',
                 position: 0,
                 title: 'Basemap Gallery',
+                iconClass: 'fa-map',
                 open: false,
                 path: 'jimu/BaseWidgetPanel',
                 options: {
@@ -108,6 +110,7 @@ define([
                 type: 'titlePane',
                 position: 0,
                 title: 'Bookmarks',
+                iconClass: 'fa-bookmark',
                 open: false,
                 path: 'jimu/BaseWidgetPanel',
                 options: {
@@ -129,6 +132,7 @@ define([
                 type: 'titlePane',
                 position: 1,
                 title: 'Charts',
+                iconClass: 'fa-bar-chart',
                 open: false,
                 canFloat: true,
                 resizable: true,
@@ -441,6 +445,7 @@ define([
                 type: 'titlePane',
                 position: 2,
                 title: 'Directions',
+                iconClass: 'fa-map-signs',
                 open: false,
                 path: 'jimu/BaseWidgetPanel',
                 options: {
@@ -475,6 +480,7 @@ define([
                 type: 'titlePane',
                 position: 3,
                 title: 'Draw',
+                iconClass: 'fa-paint-brush',
                 open: false,
                 path: 'jimu/BaseWidgetPanel',
                 options: {
@@ -495,6 +501,7 @@ define([
                 type: 'titlePane',
                 position: 4,
                 title: 'LayerList',
+                iconClass: 'fa-th-list',
                 open: false,
                 path: 'jimu/BaseWidgetPanel',
                 options: {
@@ -516,6 +523,7 @@ define([
                 type: 'titlePane',
                 position: 5,
                 title: 'Legend',
+                iconClass: 'fa-picture-o',
                 open: false,
                 path: 'jimu/BaseWidgetPanel',
                 options: {
@@ -543,6 +551,7 @@ define([
                 type: 'titlePane',
                 position: 6,
                 title: 'Measurement',
+                iconClass: 'fa-expand',
                 open: false,
                 path: 'jimu/BaseWidgetPanel',
                 options: {
@@ -569,6 +578,7 @@ define([
                 type: 'titlePane',
                 position: 7,
                 title: 'Print',
+                iconClass: 'fa-print',
                 open: false,
                 path: 'jimu/BaseWidgetPanel',
                 options: {
@@ -597,6 +607,7 @@ define([
                 type: 'titlePane',
                 position: 8,
                 title: 'Query',
+                iconClass: 'fa-search',
                 open: false,
                 path: 'jimu/BaseWidgetPanel',
                 options: {
